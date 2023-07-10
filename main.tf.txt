@@ -1,0 +1,19 @@
+data "aws_security_group" "terrademo_sg" {
+  id = aws_security_group.terrademo_sg.id
+}
+
+output "security_group_name" {
+  value = data.aws_security_group.terrademo_sg.name
+}
+
+output "security_group_description" {
+  value = data.aws_security_group.terrademo_sg.description
+}
+
+output "security_group_vpc_id" {
+  value = data.aws_security_group.terrademo_sg.vpc_id
+}
+
+output "security_group_tags" {
+  value = data.aws_security_group.terrademo_sg.tags
+}
